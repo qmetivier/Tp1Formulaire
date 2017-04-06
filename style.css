@@ -1,0 +1,13 @@
+.alignement{
+	text-align: left;
+	background-color: lightgreen;
+}
+.element{
+	background-color: lightsalmon;
+	padding: 10px 0px;
+}
+
+label{
+	width: 100px;
+	display: inline-block;
+}
