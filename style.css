@@ -1,13 +1,25 @@
 .alignement{
-	text-align: left;
 	background-color: lightgreen;
 }
 .element{
 	background-color: lightsalmon;
 	padding: 10px 0px;
+	padding-left: 20px;
 }
 
 label{
-	width: 100px;
+	width: 150px;
 	display: inline-block;
+}
+
+#send{
+	margin-left: 345px;
+}
+
+.echo{
+	color: white;
+	border:2px solid black;
+	text-align: center;
+	background-color: red;
+	width: 500px;
 }
