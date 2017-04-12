@@ -70,9 +70,11 @@
 				$ADDR_Visit = $_SERVER['SERVER_ADDR'];
 				$ADDR_Visit = str_replace('.', '_', $ADDR_Visit);
 
-				if (file_exists($ADDR_Visit)) { header('Location: invalide.php');
+				if (file_exists($ADDR_Visit)) { 
+					header('Location: invalide.php');
 				} else {
 					mkdir("./".$ADDR_Visit,0700);
+					header('Location: valide.php');
 				}
 				$file =fopen($ADDR_Visit.'/log.txt', 'w');
 				foreach ($_POST as $key => $value) {
@@ -81,11 +83,9 @@
 				fclose($file);
 
 				$tmp_name=$_FILES["photo"]["tmp_name"];
-				$name = $ADDR_Visit.$_FILES["photo"]["name"];
+				$name =$_FILES["photo"]["name"];
 				move_uploaded_file($tmp_name, "./$ADDR_Visit/".$name);
 
-				
-				header('Location: valide.php');
 				}
 			}
 
